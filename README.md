@@ -19,7 +19,7 @@ Hi there! I'm **Yang Jinlong (HongWSLilin)**, a passionate **Java Backend Engine
 
 - 🎓 **Education**: Software Engineering, Hainan University (2023.09 - 2027.06), GPA: 3.35/4.0
 - 💻 **Career Goal**: Java Backend Engineer
-- 📞 **Contact**: 15896500973 | 📧 2041813480@qq.com
+- 📞 **Contact**: 📧 2041813480@qq.com
 - 🏆 **Achievements**: CET-6 English Certificate, National Scholarship (Third Prize), Class C1 Driver's License
 
 ---
