@@ -1,1 +1,68 @@
+# GitHub Pages Jekyll 配置文件
 
+# 网站标题和基本信息
+title: HongWSLilin
+description: 个人技术博客和作品展示
+author: HongWSLilin
+email: your-email@example.com
+url: https://HongWSLilin.github.io
+baseurl: ""
+
+# Jekyll 设置
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# 集合设置
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:year/:month/:day/:slug/
+
+# 分页设置
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+# Markdown 处理
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+# 主题自定义
+minima:
+  skin: dark  # 可选: light, dark, auto
+  date_format: "%Y-%m-%d"
+  
+# SEO 优化
+social:
+  name: HongWSLilin
+  links:
+    - https://github.com/HongWSLilin
+    - https://twitter.com/your-twitter
+    - https://linkedin.com/in/your-linkedin
+
+# Google Analytics（可选）
+google_analytics: UA-XXXXXXXXX-X
+
+# 文章草稿设置
+unpublished: false
+future: false
+
+# 排除文件
+exclude:
+  - .DS_Store
+  - .git
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
+
+# 包含隐藏文件
+include:
+  - .htaccess
