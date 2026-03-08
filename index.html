@@ -3,28 +3,517 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Personal Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Yang Jinlong (HongWSLilin) - Java Backend Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#007396',
+                        secondary: '#6DB33F',
+                        accent: '#F05032',
+                        dark: '#1a1a1a',
+                        light: '#f8f9fa',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .card-hover {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+            }
+        }
+    </style>
+    <!-- 引入 Inter 字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>Welcome to My Professional Page</h1>
-        <p>Hello! I am Hong W. Silin, a passionate developer.</p>
+<body class="bg-gray-50 font-sans text-gray-800">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-code text-primary text-2xl"></i>
+                <span class="text-xl font-bold text-primary">HongWSLilin</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-700 hover:text-primary transition-colors">About</a>
+                <a href="#skills" class="text-gray-700 hover:text-primary transition-colors">Skills</a>
+                <a href="#experience" class="text-gray-700 hover:text-primary transition-colors">Experience</a>
+                <a href="#projects" class="text-gray-700 hover:text-primary transition-colors">Projects</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+            </div>
+            <button class="md:hidden text-gray-700">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 英雄区 -->
+    <header class="bg-gradient-to-r from-primary/90 to-secondary/90 text-white py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-shadow">Yang Jinlong</h1>
+                    <h2 class="text-2xl md:text-3xl font-medium mb-6">Java Backend Engineer</h2>
+                    <p class="text-lg mb-8 max-w-lg">
+                        Software Engineering Student at Hainan University | Committed to Building High-Quality Backend Systems | Open Source Enthusiast
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-white text-primary px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+                            <i class="fa fa-envelope mr-2"></i>Contact Me
+                        </a>
+                        <a href="https://github.com/HongWSLilin" target="_blank" class="bg-transparent border-2 border-white px-6 py-3 rounded-lg font-medium hover:bg-white/10 transition-colors">
+                            <i class="fa fa-github mr-2"></i>GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="w-64 h-64 bg-white/10 rounded-full flex items-center justify-center border-4 border-white/30">
+                        <i class="fa fa-user-circle-o text-9xl text-white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
-    <section>
-        <h2>About Me</h2>
-        <p>I specialize in web development and have a keen interest in creating user-friendly applications.</p>
+
+    <!-- 关于我 -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary">About Me</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card-hover bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-4 text-secondary">Education</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-graduation-cap text-primary mt-1 mr-3"></i>
+                            <div>
+                                <span class="font-medium">Hainan University (2023.09 - 2027.06)</span>
+                                <p>Software Engineering (NIIT), GPA: 3.35/4.0</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-trophy text-primary mt-1 mr-3"></i>
+                            <div>
+                                <span class="font-medium">Achievements:</span>
+                                <p>CET-6 English Certificate, National Scholarship (Third Prize), Class C1 Driver's License</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-hover bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-4 text-secondary">Career Goals</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-rocket text-primary mt-1 mr-3"></i>
+                            <p>Master high-concurrency and distributed system design</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-code-fork text-primary mt-1 mr-3"></i>
+                            <p>Develop more open-source Java frameworks and utility libraries</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-book text-primary mt-1 mr-3"></i>
+                            <p>Share technical insights and learning experiences</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-star text-primary mt-1 mr-3"></i>
+                            <p>Become an excellent backend architect</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- GitHub 统计 -->
+            <div class="mt-12 bg-gray-50 p-8 rounded-lg shadow-sm">
+                <h3 class="text-xl font-semibold mb-6 text-secondary text-center">GitHub Statistics</h3>
+                <div class="flex flex-col md:flex-row justify-center gap-8">
+                    <img src="https://github-readme-stats.vercel.app/api?username=HongWSLilin&show_icons=true&theme=dark" alt="GitHub Stats" class="rounded-lg shadow-md">
+                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=HongWSLilin&layout=compact&theme=dark" alt="Top Languages" class="rounded-lg shadow-md">
+                </div>
+            </div>
+        </div>
     </section>
-    <section>
-        <h2>Projects</h2>
-        <ul>
-            <li>Project 1 - Description</li>
-            <li>Project 2 - Description</li>
-            <li>Project 3 - Description</li>
-        </ul>
+
+    <!-- 技术栈 -->
+    <section id="skills" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary">Technical Stack</h2>
+            
+            <!-- 技术标签 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <!-- 编程语言 -->
+                <div class="card-hover bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-semibold mb-4 text-secondary flex items-center">
+                        <i class="fa fa-code mr-2"></i>Programming Languages
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <span class="inline-block px-3 py-1 bg-[#007396] text-white rounded text-sm mr-3">Java</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="inline-block px-3 py-1 bg-[#FCC624] text-black rounded text-sm mr-3">Linux</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="inline-block px-3 py-1 bg-[#4479A1] text-white rounded text-sm mr-3">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 后端框架 -->
+                <div class="card-hover bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-semibold mb-4 text-secondary flex items-center">
+                        <i class="fa fa-cogs mr-2"></i>Backend Frameworks
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <span class="inline-block px-3 py-1 bg-[#6DB33F] text-white rounded text-sm mr-3">Spring Boot</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="inline-block px-3 py-1 bg-[#6DB33F] text-white rounded text-sm mr-3">Spring</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="inline-block px-3 py-1 bg-black text-white rounded text-sm mr-3">MyBatis</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 缓存 & 消息队列 -->
+                <div class="card-hover bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-semibold mb-4 text-secondary flex items-center">
+                        <i class="fa fa-database mr-2"></i>Cache & MQ
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <span class="inline-block px-3 py-1 bg-[#DC382D] text-white rounded text-sm mr-3">Redis</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="inline-block px-3 py-1 bg-[#92D400] text-black rounded text-sm mr-3">Vert.x</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 工具 -->
+                <div class="card-hover bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-semibold mb-4 text-secondary flex items-center">
+                        <i class="fa fa-wrench mr-2"></i>Tools & VCS
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <span class="inline-block px-3 py-1 bg-[#F05032] text-white rounded text-sm mr-3">Git</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="inline-block px-3 py-1 bg-[#C71A36] text-white rounded text-sm mr-3">Maven</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="inline-block px-3 py-1 bg-black text-white rounded text-sm mr-3">IDEA</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="inline-block px-3 py-1 bg-[#FF6C37] text-white rounded text-sm mr-3">Postman</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 核心技能 -->
+            <div class="bg-white p-8 rounded-lg shadow-sm">
+                <h3 class="text-xl font-semibold mb-6 text-secondary text-center">Core Skills</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="flex items-start p-4 border border-gray-100 rounded-lg hover:bg-gray-50 transition-colors">
+                        <i class="fa fa-check-circle text-primary text-xl mt-1 mr-3"></i>
+                        <div>
+                            <h4 class="font-medium">Java Core</h4>
+                            <p class="text-gray-600 text-sm">Collections, IO, Exception Handling, Reflection, Concurrency, Design Patterns</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start p-4 border border-gray-100 rounded-lg hover:bg-gray-50 transition-colors">
+                        <i class="fa fa-check-circle text-primary text-xl mt-1 mr-3"></i>
+                        <div>
+                            <h4 class="font-medium">Common Tools</h4>
+                            <p class="text-gray-600 text-sm">Hutool, Jackson/Json, HttpClient, Logback</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start p-4 border border-gray-100 rounded-lg hover:bg-gray-50 transition-colors">
+                        <i class="fa fa-check-circle text-primary text-xl mt-1 mr-3"></i>
+                        <div>
+                            <h4 class="font-medium">Web Development</h4>
+                            <p class="text-gray-600 text-sm">Spring Boot + MyBatis Stack, RESTful API Development</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start p-4 border border-gray-100 rounded-lg hover:bg-gray-50 transition-colors">
+                        <i class="fa fa-check-circle text-primary text-xl mt-1 mr-3"></i>
+                        <div>
+                            <h4 class="font-medium">Database</h4>
+                            <p class="text-gray-600 text-sm">Redis Caching Design, MySQL Optimization</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start p-4 border border-gray-100 rounded-lg hover:bg-gray-50 transition-colors">
+                        <i class="fa fa-check-circle text-primary text-xl mt-1 mr-3"></i>
+                        <div>
+                            <h4 class="font-medium">Development Tools</h4>
+                            <p class="text-gray-600 text-sm">Git Version Control, Maven Build, IDEA IDE, Markdown Documentation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <footer>
-        <p>Contact me at: <a href="mailto:example@example.com">example@example.com</a></p>
+
+    <!-- 经验 -->
+    <section id="experience" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary">Experience</h2>
+            
+            <!-- 实习经验 -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6 text-secondary text-center">Internship Experience</h3>
+                <div class="card-hover max-w-3xl mx-auto bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <div class="flex flex-col md:flex-row md:items-center mb-4">
+                        <div class="md:w-2/3">
+                            <h4 class="text-xl font-medium">Java Backend Engineer Intern</h4>
+                            <p class="text-gray-600">Anai Technology Shanghai Co., Ltd</p>
+                        </div>
+                        <div class="md:w-1/3 text-right">
+                            <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-lg text-sm">2026.01 - 2026.02</span>
+                        </div>
+                    </div>
+                    <h5 class="font-medium mb-3">Main Responsibilities:</h5>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fa fa-angle-right text-primary mt-1 mr-3"></i>
+                            <p>Participated in the development of an online video learning platform, responsible for backend Java module design and implementation</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-angle-right text-primary mt-1 mr-3"></i>
+                            <p>Developed learning platform based on Spring Boot framework, including class management, learning progress tracking, and performance optimization features</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-angle-right text-primary mt-1 mr-3"></i>
+                            <p>Designed dynamic table storage structures using MySQL, supporting flexible extensions for multi-type learning data</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-angle-right text-primary mt-1 mr-3"></i>
+                            <p>Assisted in developing course content quality management system with automatic learning progress synchronization, implementing comprehensive logging monitoring and unit testing to ensure module stability</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 项目经验 -->
+            <div id="projects">
+                <h3 class="text-2xl font-semibold mb-6 text-secondary text-center">Project Experience</h3>
+                <div class="card-hover max-w-4xl mx-auto bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <div class="flex flex-col md:flex-row md:items-center mb-4">
+                        <div class="md:w-2/3">
+                            <h4 class="text-xl font-medium">KananRPC - Lightweight Event-Driven RPC Framework</h4>
+                            <p class="text-gray-600">Based on Vert.x</p>
+                        </div>
+                        <div class="md:w-1/3 text-right">
+                            <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-lg text-sm">2025.9 - 2026.1</span>
+                        </div>
+                    </div>
+                    <h5 class="font-medium mb-3">Project Overview:</h5>
+                    <p class="text-gray-700 mb-4">
+                        This framework is built with Java, integrating Etcd and Vert.x technologies with custom protocol extensions. It enables quick integration through Spring Boot Starter dependency, supporting annotation-based configuration. The framework employs SPI mechanism for flexible dynamic feature extension, implementing core functionalities including load balancing strategies, retry logic, and fault tolerance mechanisms.
+                    </p>
+                    <h5 class="font-medium mb-3">Core Technical Implementation:</h5>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fa fa-wrench text-primary mt-1 mr-3"></i>
+                            <p><span class="font-medium">Message Queue & Processing:</span> Handle high-concurrency calls, serialize/deserialize data, manage network services, and declare service relationships</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-globe text-primary mt-1 mr-3"></i>
+                            <p><span class="font-medium">HTTP Service:</span> Build HTTP services based on Vert.x, supporting asynchronous and bidirectional communication with high performance</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-lock text-primary mt-1 mr-3"></i>
+                            <p><span class="font-medium">Concurrency Safety:</span> Utilize thread-safe ConcurrentHashMap for local service mapping, support name-based service lookup and concurrent deserialization</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-box text-primary mt-1 mr-3"></i>
+                            <p><span class="font-medium">Dynamic Serialization:</span> Define generic interfaces for extensibility, implement JdkSerializer based on Java reflection and ByteArray streams for network object transmission</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-bolt text-primary mt-1 mr-3"></i>
+                            <p><span class="font-medium">Request Processing:</span> Handle requests asynchronously using Vert.x Handler, perform deserialization, determine service implementation, and invoke via reflection</p>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-exchange text-primary mt-1 mr-3"></i>
+                            <p><span class="font-medium">HTTP Proxy:</span> Generate factory-style HTTP proxies for service interfaces using JDK dynamic proxy, enabling seamless remote invocation</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我 -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary">Get in Touch</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white p-8 rounded-lg shadow-sm card-hover">
+                    <h3 class="text-xl font-semibold mb-6 text-secondary">Contact Information</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa fa-phone text-primary text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-medium">Phone</h4>
+                                <p class="text-gray-600">15896500973</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-envelope text-primary text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-medium">Email</h4>
+                                <p class="text-gray-600">2041813480@qq.com</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-github text-primary text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-medium">GitHub</h4>
+                                <a href="https://github.com/HongWSLilin" target="_blank" class="text-gray-600 hover:text-primary transition-colors">@HongWSLilin</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-globe text-primary text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-medium">Personal Website</h4>
+                                <a href="https://HongWSLilin.github.io" target="_blank" class="text-gray-600 hover:text-primary transition-colors">HongWSLilin.github.io</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-sm card-hover">
+                    <h3 class="text-xl font-semibold mb-6 text-secondary">Send Me a Message</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Your Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors" placeholder="john@example.com">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors" placeholder="Hello! I'm interested in your work..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors">
+                            <i class="fa fa-paper-plane mr-2"></i>Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-center md:text-left">Made with ❤️ by Yang Jinlong (HongWSLilin)</p>
+                    <p class="text-gray-400 text-sm text-center md:text-left mt-1">Looking forward to collaboration and exchange! 🚀</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="https://github.com/HongWSLilin" target="_blank" class="text-white hover:text-primary transition-colors">
+                        <i class="fa fa-github text-xl"></i>
+                    </a>
+                    <a href="mailto:2041813480@qq.com" class="text-white hover:text-primary transition-colors">
+                        <i class="fa fa-envelope text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-primary transition-colors">
+                        <i class="fa fa-linkedin text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-6 text-gray-400 text-sm">
+                <p>© 2026 Yang Jinlong. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-primary/90 transition-colors opacity-0 invisible">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // 返回顶部按钮
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // 移动端菜单切换（简单实现）
+        const menuBtn = document.querySelector('button.md\\:hidden');
+        const navLinks = document.querySelector('div.hidden.md\\:flex');
+        
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('hidden');
+            navLinks.classList.toggle('flex');
+            navLinks.classList.toggle('flex-col');
+            navLinks.classList.toggle('absolute');
+            navLinks.classList.toggle('top-16');
+            navLinks.classList.toggle('left-0');
+            navLinks.classList.toggle('right-0');
+            navLinks.classList.toggle('bg-white');
+            navLinks.classList.toggle('shadow-md');
+            navLinks.classList.toggle('py-4');
+            navLinks.classList.toggle('px-4');
+            navLinks.classList.toggle('space-y-4');
+            navLinks.classList.toggle('space-x-0');
+        });
+    </script>
 </body>
 </html>
