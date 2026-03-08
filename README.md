@@ -109,7 +109,6 @@ This framework is built with Java, integrating Etcd and Vert.x technologies with
 
 ## 🤝 Get in Touch
 
-- 📞 **Phone**: 15896500973
 - 📧 **Email**: [2041813480@qq.com](mailto:2041813480@qq.com)
 - 💼 **GitHub**: [@HongWSLilin](https://github.com/HongWSLilin)
 - 🌐 **Personal Website**: [HongWSLilin.github.io](https://HongWSLilin.github.io)
