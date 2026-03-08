@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yang Jinlong (HongWSLilin) - Java Backend Engineer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 替换为 Tailwind 生产版 CDN（消除警告） -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script>
         tailwind.config = {
@@ -139,12 +140,12 @@
                 </div>
             </div>
             
-            <!-- GitHub 统计 -->
+            <!-- GitHub 统计（替换为稳定镜像源，解决 503 错误） -->
             <div class="mt-12 bg-gray-50 p-8 rounded-lg shadow-sm">
                 <h3 class="text-xl font-semibold mb-6 text-secondary text-center">GitHub Statistics</h3>
                 <div class="flex flex-col md:flex-row justify-center gap-8">
-                    <img src="https://github-readme-stats.vercel.app/api?username=HongWSLilin&show_icons=true&theme=dark" alt="GitHub Stats" class="rounded-lg shadow-md">
-                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=HongWSLilin&layout=compact&theme=dark" alt="Top Languages" class="rounded-lg shadow-md">
+                    <img src="https://stats.justsong.cn/api/github-stats?username=HongWSLilin&show_icons=true&theme=dark" alt="GitHub Stats" class="rounded-lg shadow-md">
+                    <img src="https://stats.justsong.cn/api/top-langs?username=HongWSLilin&layout=compact&theme=dark" alt="Top Languages" class="rounded-lg shadow-md">
                 </div>
             </div>
         </div>
